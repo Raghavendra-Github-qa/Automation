@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-public class BaseTest {
+public abstract class BaseTest {
 	@BeforeMethod
 	public void openApp() {
 		WebDriver driver = new ChromeDriver();
@@ -19,5 +19,4 @@ public class BaseTest {
 	public void closeApp(WebDriver driver) {
 		driver.close();
 	}
-
 }
