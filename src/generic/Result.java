@@ -6,6 +6,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.Listeners;
 @Listeners(Result.class)
 public class Result implements ITestListener,IAutoConst{
+
 	public static int passCount=0, failCount=0;
 
 	@Override
@@ -23,6 +24,7 @@ public class Result implements ITestListener,IAutoConst{
 	@Override
 	public void onTestFailure(ITestResult result) {
 		failCount++;
+//		Utility.getPhoto(driver, PHOTO_PATH);
 		
 	}
 
