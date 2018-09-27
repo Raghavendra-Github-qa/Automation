@@ -24,12 +24,12 @@ public abstract class BaseTest implements IAutoConst {
 	@Parameters({"ip","browser"})
 	@BeforeMethod(alwaysRun=true)
 	public void openApp(@Optional("localhost")String ip, @Optional("chrome")String browser) {
-		driver=Utility.openBrowser(driver, "localhost", "chrome");
+		driver=Utility.openBrowser(driver, ip, browser);
 		driver.manage().timeouts().implicitlyWait(duration, TimeUnit.SECONDS);
 		driver.get(url);
 	}
 	
-	@AfterMethod
+	@AfterMethod(alwaysRun=true)
 	public void closeApp(ITestResult result) {
 		String name = result.getName();
 		int status = result.getStatus();
@@ -41,6 +41,6 @@ public abstract class BaseTest implements IAutoConst {
 			Reporter.log("Test: "+name+" is PASSED",true);
 		}
 		
-		driver.close();
+		driver.quit();
 	}
 }

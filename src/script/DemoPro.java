@@ -1,12 +1,11 @@
-package generic;
+package script;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
-public class DemoA {
-
+public class DemoPro {
 	public static void main(String[] args) throws FileNotFoundException, IOException {
 		//Create object of Properties class
 		Properties p = new Properties();
