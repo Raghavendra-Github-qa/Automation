@@ -11,6 +11,13 @@
           <include name="closeApp"/>
         </methods>
       </class> <!-- script.DemoA -->
+      <class name="script.TestDemo">
+        <methods>
+          <include name="openApp"/>
+          <include name="testA"/>
+          <include name="closeApp"/>
+        </methods>
+      </class> <!-- script.TestDemo -->
     </classes>
   </test> <!-- me(failed) -->
 </suite> <!-- Failed suite [Suite] -->
